@@ -24,6 +24,7 @@ function generateBoard(row, column){
     //Creates variables
     TOTAL_SQUARES = row * column;
     let memory_fruits = [];
+    game_started = false;
 
     remaining_pairs = TOTAL_SQUARES/2;
     updatePairsLeft();
