@@ -1,0 +1,119 @@
+@font-face{
+    font-family:'Fruity Juice';
+    src: url('fonts/Fruity Juice.otf')
+}
+
+/* All Objects */
+body{
+    background-color:#ffb0be;
+    font-family: 'Fruity Juice';
+
+
+    text-align: center;
+    caret-color: transparent;
+}
+h1{
+    font-size: 40px;
+    color:green;
+}
+
+
+
+/* Top Bar */
+.bar{    
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+.bar-item{
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+}
+p.bar-item{
+    font-size: 24px;
+    width: 180px;
+}
+
+button.bar-item{
+    background-color: #0cbb0c;
+    font-family: 'Fruity Juice';
+    font-size: 18px;
+
+    border-radius: 20px;
+    border-width: 0px;
+    box-shadow:0px 0px 0px 3px green inset;
+
+    padding: 15px 40px 15px 40px;
+
+    transition: 0.2s;
+}
+button.bar-item:hover{
+    background-color:#ff4b4b;
+
+    transform: scale(1.1);
+    box-shadow:0px 0px 0px 3px #ffffff inset;
+
+
+    transition: 0.2s;
+}
+button.bar-item:active{
+    background-color: rgba(0, 0, 0, 0.247);
+
+    transform: scale(0.9);
+}
+
+
+
+
+/* Squares */
+.square-container{
+    display:flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+.square-row{
+    display: flex;
+    flex-direction: row;
+
+}
+.square{
+    height: 80px;    
+    width: 80px;
+    background-color: #ff7878;
+    background-size: cover;
+
+    border-radius: 40% 10% 40% 40%;
+
+
+    margin: 10px;
+
+    transition: 0.2s;
+}
+
+
+
+/* Square Extended */
+.square.unanswered:hover{
+    background-color: #ff9494;
+
+    transform: scale(1.2);
+    box-shadow:0px 0px 0px 3px #ffffff inset;
+
+    transition: 0.2s;
+}
+.square.selected{
+    background-color: #ff9494;
+
+    transform: scale(1.2);
+    box-shadow:0px 0px 0px 3px #ffffff inset;
+
+    transition: 0.2s;
+}
+.square.correct{
+    background-color: #38be38;
+    box-shadow:0px 0px 0px 3px #ebebeb inset;
+}

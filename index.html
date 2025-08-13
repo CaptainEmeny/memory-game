@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href = "style.css">
+        <title>Fruit Memory Game</title>
+        <link rel="icon" href="images/fruits/apple.png">
+    </head>
+    <body>
+        <h1>Fruit <span style ="color: #00a800"> Memory</span> Game</h1>
+        <div class= "bar">
+            <p id="pair-tracker" class= "bar-item">Pairs Left: ?</p>
+            <div class= "button-container">
+                <button class= "bar-item" onclick="generateBoard(2, 2)">2x2</button>
+                <button class= "bar-item" onclick="generateBoard(4, 4)">4x4</button>
+                <button class= "bar-item" onclick="generateBoard(6, 6)">6x6</button>
+                </div>
+            <p id="wrong-tracker" class ="bar-item">Wrong:<br> 0</p>
+        </div>
+        <audio id="munch-sound"> <source src="sounds/munch.mp3" type="audio/mpeg"> </audio>
+        <audio id="win-sound"> <source src = "sounds/winsound.mp3" type="audio/mpeg"> </audio>
+        <div class= "square-container"></div>
+        <script type= "text/javascript" src= "memory-functions.js"></script>
+    </body>
+</html>
