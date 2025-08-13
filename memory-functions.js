@@ -15,6 +15,8 @@ let game_started = false;
 
 //Fruit Hiding
 let shown_fruits_timer;
+let start_fruits_timer;
+
 let fruits_hidden = true;
 let wrong_fruit1;
 let wrong_fruit2;
@@ -72,7 +74,11 @@ function generateBoard(row, column){
         new_board.appendChild(square_row);
     }
 
+    //Starts the Screen Hide Timer
     game_fruits = document.getElementsByClassName('square');
+    if (!game_started){
+        clearTimeout(start_fruits_timer);
+    }
     startTimer();
 
     board.innerHTML = '';
@@ -118,6 +124,7 @@ function pairCheck(square){
 
 
     if (!game_started){
+        clearTimeout(start_fruits_timer);
         hideAllImages(game_fruits);
     }
 
@@ -196,7 +203,7 @@ function fruitTimer(){
     fruits_hidden = true;
 }
 function startTimer(){
-    setTimeout(hideAllImages,3000, game_fruits);
+    start_fruits_timer = setTimeout(hideAllImages,3000, game_fruits);
 }
 function hideAllImages(array){
     for (let i = 0; i < array.length; i++){
